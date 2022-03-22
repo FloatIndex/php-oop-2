@@ -7,7 +7,7 @@
         protected $email;
         protected $phoneNumber;
         protected $discount = 0;
-        protected $address;
+        public $address;
         protected $creditCard;
 
         public function __construct($firstName, $lasttName, $email) {

@@ -2,22 +2,22 @@
 
 require_once __DIR__ . '/Product.php';
 
-class FleaAndTick extends Product {
-    protected $fleaAndTickCategory = 'ND'; // pills, collar, shampoo
-    protected $monthlyAvailability = ['ND'];
+class Flea extends Product {
+    protected $fleaCategory; // pills, collar, shampoo
+    protected $monthlyAvailability = [];
 
     // categoria antipulci scelta tra pills, collar, shampoo
-    public function setFleaAndTickCategory($fleaAndTickCategory, $fleaAndTickCategories) {
+    public function setFleaCategory($fleaCategory, $fleaCategories) {
 
-        if(in_array(strtolower($fleaAndTickCategory), $fleaAndTickCategories)) {
-            $this->fleaAndTickCategory = $fleaAndTickCategory;
+        if(in_array(strtolower($fleaCategory), $fleaCategories)) {
+            $this->fleaCategory = $fleaCategory;
         } else {
             echo "<strong class='error'>ERRORE: categoria prodotto non esistente</strong>";
         }
     }
 
-    public function getFleaAndTickCategory() {
-        return $this->fleaAndTickCategory;
+    public function getFleaCategory() {
+        return $this->fleaCategory;
     }
 
     // disponibilità mensile (no ripetizioni)

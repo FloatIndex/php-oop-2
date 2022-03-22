@@ -3,8 +3,8 @@
 require_once __DIR__ . '/Product.php';
 
 class Food extends Product {
-    protected $foodCategory = 'ND'; // canned, dry, fresh, frozen
-    protected $lifeStages = ['ND']; // all, puppy, adult, senior
+    protected $foodCategory; // canned, dry, fresh, frozen
+    protected $lifeStages = []; // all, puppy, adult, senior
 
     // cibo
     public function setFoodCategory($foodCategory, $foodCategories) {

@@ -10,7 +10,7 @@ $pets = [
 $productCategories = [
     'toy',
     'food',
-    'flea and tick'
+    'flea'
 ];
 
 // giochi
@@ -41,7 +41,7 @@ $lifeStages = [
 ];
 
 // antipulci
-$fleaAndTickCategories = [
+$fleaCategories = [
     'pills',
     'collar',
     'shampoo'
@@ -73,7 +73,7 @@ $products = [
                 'price' => 12,
                 'quantity' => 122,
                 'toyCategory' => 'ball',
-                'materials' => ['plush'],
+                'materials' => ['plush', 'rubber'],
             ],
             [
                 'productName' => 'nome2',
@@ -94,8 +94,8 @@ $products = [
                 'pet' => 'dog',
                 'price' => 12,
                 'quantity' => 122,
-                'toyCategory' => 'dry',
-                'lifeStage' => ['puppy'],
+                'foodCategory' => 'dry',
+                'lifeStages' => ['puppy'],
             ],
             [
                 'productName' => 'nome2',
@@ -104,29 +104,29 @@ $products = [
                 'pet' => 'dog',
                 'price' => 12,
                 'quantity' => 122,
-                'toyCategory' => 'frozen',
-                'lifeStage' => ['adult', 'senior'],
+                'foodCategory' => 'frozen',
+                'lifeStages' => ['adult', 'senior'],
             ]
         ],
-        'flea and tick' => [
+        'fleas' => [
             [
                 'productName' => 'nome',
                 'brand' => 'brand',
-                'productCategory' => 'flea and tick',
+                'productCategory' => 'flea',
                 'pet' => 'dog',
                 'price' => 12,
                 'quantity' => 122,
-                'toyCategory' => 'pills',
+                'fleaCategory' => 'pills',
                 'monthlyAvailability' => ['MAG'],
             ],
             [
                 'productName' => 'nome2',
                 'brand' => 'brand2',
-                'productCategory' => 'flea and tick',
+                'productCategory' => 'flea',
                 'pet' => 'dog',
                 'price' => 12,
                 'quantity' => 122,
-                'toyCategory' => 'collar',
+                'fleaCategory' => 'collar',
                 'monthlyAvailability' => ['GIU', 'LUG'],
             ]
         ]
@@ -162,8 +162,8 @@ $products = [
                 'pet' => 'cat',
                 'price' => 12,
                 'quantity' => 122,
-                'toyCategory' => 'canned',
-                'lifeStage' => ['puppy'],
+                'foodCategory' => 'canned',
+                'lifeStages' => ['puppy'],
             ],
             [
                 'productName' => 'nome2',
@@ -172,29 +172,29 @@ $products = [
                 'pet' => 'cat',
                 'price' => 12,
                 'quantity' => 122,
-                'toyCategory' => 'fresh',
-                'lifeStage' => ['adult', 'senior'],
+                'foodCategory' => 'fresh',
+                'lifeStages' => ['adult', 'senior'],
             ]
         ],
-        'flea and tick' => [
+        'fleas' => [
             [
                 'productName' => 'nome',
                 'brand' => 'brand',
-                'productCategory' => 'flea and tick',
+                'productCategory' => 'flea',
                 'pet' => 'cat',
                 'price' => 12,
                 'quantity' => 122,
-                'toyCategory' => 'shampoo',
+                'fleaCategory' => 'shampoo',
                 'monthlyAvailability' => ['MAG'],
             ],
             [
                 'productName' => 'nome2',
                 'brand' => 'brand2',
-                'productCategory' => 'flea and tick',
+                'productCategory' => 'flea',
                 'pet' => 'cat',
                 'price' => 12,
                 'quantity' => 122,
-                'toyCategory' => 'collar',
+                'fleaCategory' => 'collar',
                 'monthlyAvailability' => ['GIU', 'LUG'],
             ]
         ]

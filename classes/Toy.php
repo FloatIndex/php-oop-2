@@ -3,8 +3,8 @@
 require_once __DIR__ . '/Product.php';
 
 class Toy extends Product {
-    protected $toyCategory = 'ND'; // ball, flying, interactive
-    protected $materials = ['ND']; // plush, nylon, rubber
+    protected $toyCategory; // ball, flying, interactive
+    protected $materials; // plush, nylon, rubber
 
     // cibo
     public function setToyCategory($toyCategory, $toyCategories) {
@@ -20,8 +20,8 @@ class Toy extends Product {
     }
 
     // materiali (no ripetizioni)
-    public function addMaterial($material, $dataToyMaterials) {
-        if(in_array(strtolower($material), $dataToyMaterials) && !in_array(strtolower($material), $this->materials)) {
+    public function addMaterial($material, $toyMaterials) {
+        if(in_array(strtolower($material), $toyMaterials) && !in_array(strtolower($material), $this->materials)) {
             $this->materials[] = strtolower($material);
         } else {
             echo "<strong class='error'>ERRORE: materiale non valido o già aggiunto</strong>";
