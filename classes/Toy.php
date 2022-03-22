@@ -4,7 +4,7 @@ require_once __DIR__ . '/Product.php';
 
 class Toy extends Product {
     protected $toyCategory; // ball, flying, interactive
-    protected $materials; // plush, nylon, rubber
+    protected $materials = []; // plush, nylon, rubber
 
     // cibo
     public function setToyCategory($toyCategory, $toyCategories) {

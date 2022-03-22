@@ -7,6 +7,7 @@
         protected $email;
         protected $phoneNumber;
         protected $discount = 0;
+        protected $registered = false;
         public $address;
         protected $creditCard;
 
@@ -96,17 +97,14 @@
             return $this->phoneNumber;
         }
 
-        // discount compreso tra 0 e 100
-        public function setDiscount($discount) {
-            if(is_numeric($discount) && $discount >= 0 && $discount <= 100) {
-                $this->discount = $discount;
-            } else {
-                echo "<strong class='error'>ERRORE: discount non valido</strong>";
-            }
-        }
-
+        // discount
         public function getDiscount() {
             return $this->discount;
+        }
+
+        // registrato (booleano)
+        public function getRegistered() {
+            return $this->registered;
         }
 
         // i controlli sull'indirizzo sono già fatti nella relativa classe

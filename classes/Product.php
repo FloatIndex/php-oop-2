@@ -69,7 +69,7 @@ class Product {
         return $this->pet;
     }
 
-    // prezzo float maggiore di 0
+    // prezzo float o int maggiore di 0
     public function setPrice($price) {
         if((is_int($price) || is_float($price)) && $price > 0) {
             $this->price = $price;
