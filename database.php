@@ -88,8 +88,8 @@ $products = [
         ],
         'foods' => [
             [
-                'productName' => 'nome',
-                'brand' => 'brand',
+                'productName' => 'Purina Pro Plan',
+                'brand' => 'Purina',
                 'productCategory' => 'food',
                 'pet' => 'dog',
                 'price' => 12,
@@ -110,8 +110,8 @@ $products = [
         ],
         'fleas' => [
             [
-                'productName' => 'nome',
-                'brand' => 'brand',
+                'productName' => 'Frontline Plus Flea & Tick Dog Treatment',
+                'brand' => 'Frontline',
                 'productCategory' => 'flea',
                 'pet' => 'dog',
                 'price' => 12,
@@ -120,8 +120,8 @@ $products = [
                 'monthlyAvailability' => ['MAG'],
             ],
             [
-                'productName' => 'nome2',
-                'brand' => 'brand2',
+                'productName' => 'Seresto Flea & Tick Dog Collar',
+                'brand' => 'Seresto',
                 'productCategory' => 'flea',
                 'pet' => 'dog',
                 'price' => 12,

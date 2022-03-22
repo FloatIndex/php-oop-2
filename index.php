@@ -80,29 +80,38 @@ require_once __DIR__ . '/classes/Flea.php';
                             //     }
                             // }
                             if($key == "foods") {
+                                echo "<h4>cibo</h4>";
                                 foreach($products as $food) {
                                     // creo nuovo oggetto cibo
-                                    ${"food" . ($key)} = new Food($food["productName"], $food["productCategory"], $productCategories, $food["pet"], $pets, $food["price"], $food["quantity"]);
+                                    $instance = new Food($food["productName"], $food["productCategory"], $productCategories, $food["pet"], $pets, $food["price"], $food["quantity"]);
                                     // setto la categoria cibo
-                                    ${"food" . ($key)}->setFoodCategory($food["foodCategory"], $foodCategories);
+                                    $instance->setFoodCategory($food["foodCategory"], $foodCategories);
                                     // aggiungo le età
                                     foreach($food["lifeStages"] as $lifeStage) {
-                                        ${"food" . ($key)}->addLifeStage($lifeStage, $lifeStages);
+                                        $instance->addLifeStage($lifeStage, $lifeStages);
                                     }
-                                    var_dump(${"food" . ($key)});
+                                    // var_dump($instance);
+                                    echo "<strong>Nome: </strong><span>" . $instance->getProductName() . "</span>";
+                                    echo "<br>";
+                                    echo "<strong>Brand: </strong><span>" . $instance->getBrand() . "</span>";
+                                    echo "<br>";
+                                    
                                 }
                             }
                             if($key == "fleas") {
+                                echo "<h4>antipulci</h4>";
                                 foreach($products as $flea) {
                                     // creo nuovo oggetto antipulci
-                                    ${"flea" . ($key)} = new Flea($flea["productName"], $flea["productCategory"], $productCategories, $flea["pet"], $pets, $flea["price"], $flea["quantity"]);
+                                    $instance = new Flea($flea["productName"], $flea["productCategory"], $productCategories, $flea["pet"], $pets, $flea["price"], $flea["quantity"]);
                                     // setto la categoria antipulci
-                                    ${"flea" . ($key)}->setFleaCategory($flea["fleaCategory"], $fleaCategories);
+                                    $instance->setFleaCategory($flea["fleaCategory"], $fleaCategories);
                                     // aggiungo le disponibilità mensili
                                     foreach($flea["monthlyAvailability"] as $month) {
-                                        ${"flea" . ($key)}->addMonthlyAvailability($month, $months);
+                                        $instance->addMonthlyAvailability($month, $months);
                                     }
-                                    var_dump(${"flea" . ($key)});
+                                    // var_dump($instance);
+                                    echo "<strong>Nome: </strong><span>" . $instance->getProductName() . "</span>";
+                                    echo "<br>";
                                 }
                             }
                         }
@@ -126,27 +135,35 @@ require_once __DIR__ . '/classes/Flea.php';
                             if($key == "foods") {
                                 foreach($products as $food) {
                                     // creo nuovo oggetto cibo
-                                    ${"food" . ($key)} = new Food($food["productName"], $food["productCategory"], $productCategories, $food["pet"], $pets, $food["price"], $food["quantity"]);
+                                    $instance = new Food($food["productName"], $food["productCategory"], $productCategories, $food["pet"], $pets, $food["price"], $food["quantity"]);
                                     // setto la categoria cibo
-                                    ${"food" . ($key)}->setFoodCategory($food["foodCategory"], $foodCategories);
+                                    $instance->setFoodCategory($food["foodCategory"], $foodCategories);
                                     // aggiungo le età
                                     foreach($food["lifeStages"] as $lifeStage) {
-                                        ${"food" . ($key)}->addLifeStage($lifeStage, $lifeStages);
+                                        $instance->addLifeStage($lifeStage, $lifeStages);
                                     }
-                                    var_dump(${"food" . ($key)});
+                                    // var_dump($instance);
+                                    echo "<strong>Nome: </strong><span>" . $instance->getProductName() . "</span>";
+                                    echo "<br>";
+                                    echo "<strong>Brand: </strong><span>" . $instance->getBrand() . "</span>";
+                                    echo "<br>";
                                 }
                             }
                             if($key == "fleas") {
                                 foreach($products as $flea) {
                                     // creo nuovo oggetto antipulci
-                                    ${"flea" . ($key)} = new Flea($flea["productName"], $flea["productCategory"], $productCategories, $flea["pet"], $pets, $flea["price"], $flea["quantity"]);
+                                    $instance = new Flea($flea["productName"], $flea["productCategory"], $productCategories, $flea["pet"], $pets, $flea["price"], $flea["quantity"]);
                                     // setto la categoria antipulci
-                                    ${"flea" . ($key)}->setFleaCategory($flea["fleaCategory"], $fleaCategories);
+                                    $instance->setFleaCategory($flea["fleaCategory"], $fleaCategories);
                                     // aggiungo le disponibilità mensili
                                     foreach($flea["monthlyAvailability"] as $month) {
-                                        ${"flea" . ($key)}->addMonthlyAvailability($month, $months);
+                                        $instance->addMonthlyAvailability($month, $months);
                                     }
-                                    var_dump(${"flea" . ($key)});
+                                    // var_dump($instance);
+                                    echo "<strong>Nome: </strong><span>" . $instance->getProductName() . "</span>";
+                                    echo "<br>";
+                                    echo "<strong>Brand: </strong><span>" . $instance->getBrand() . "</span>";
+                                    echo "<br>";
                                 }
                             }
                         }
