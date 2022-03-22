@@ -53,6 +53,11 @@ main .user {
     color: #004A6B;
 }
 
+main .user .card-validation {
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
 main .products {
     margin-left: 20px;
 }

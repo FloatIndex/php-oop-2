@@ -20,7 +20,7 @@ require_once __DIR__ . '/classes/Flea.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <title>Shop</title>
+    <title>Pet Shop</title>
 </head>
 <body>
     <header>
@@ -36,7 +36,6 @@ require_once __DIR__ . '/classes/Flea.php';
                 $user->setCreditCard($userCreditCard);
                 $userAddress = new Address('Via del matto', '99', '25128', 'Milano', 'Italia');
                 $user->setAddress($userAddress);
-                // var_dump($user);
 
                 if($user->getRegistered()) {
                     echo "<h2>utente registrato</h2>";
@@ -53,13 +52,11 @@ require_once __DIR__ . '/classes/Flea.php';
                 echo "<br>";
                 echo "<strong>Sconto applicabile: </strong><span class='green'>{$user->getDiscount()}%</span>";
 
-                /*
-                    if($creditCard->isExpired()) {
-                        echo '<br>carta scaduta';
-                    } else {
-                        echo '<br>carta valida';
-                    }
-                */
+                if($userCreditCard->isExpired()) {
+                    echo "<p><strong class='red card-validation'>carta scaduta</strong></p>";
+                } else {
+                    echo "<p><strong class='green card-validation'>carta valida</strong></p>";
+                }
             ?> 
         </div>
 

@@ -78,10 +78,8 @@ class CreditCard {
 
     public function isExpired() {
         $today = new DateTime();
-        $expiration = DateTime::createFromFormat('m-y', $this->expirationMonth . '/' . $this->expirationYear);
-        //var_dump($today);
-        //var_dump($expiration);
-        //echo "expiration: ", $expiration->format("m-y");
+        $expiration = DateTime::createFromFormat('m/y', "$this->expirationMonth" . '/' . "$this->expirationYear");
+        //echo $expiration->format("m/y");
         if($today > $expiration) {
             return true;
         }
