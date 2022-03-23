@@ -102,7 +102,9 @@ require_once __DIR__ . '/classes/Flea.php';
                             // diversi stili e output quantità
                             if($toy->getQuantity() < 20) {
                                 echo "<p class='product-info'><strong>Quantità: </strong><span class='red'>" . $toy->getQuantity() . " (in esaurimento)</span></p>";
-                            } else if($toy->getQuantity() >= 20 && $toy->getQuantity() < 200) {
+                            } else if ($toy->getQuantity() >= 20 && $toy->getQuantity() < 50) {
+                                echo "<p class='product-info'><strong>Quantità: </strong><span class='orange'>" . $toy->getQuantity() . "</span></p>";
+                            } else if($toy->getQuantity() >= 50 && $toy->getQuantity() < 200) {
                                 echo "<p class='product-info'><strong>Quantità: </strong><span class='green'>" . $toy->getQuantity() . "</span></p>";
                             } else {
                                 echo "<p class='product-info'><strong>Quantità: </strong><span class='green'>200+</span><br>";
@@ -141,7 +143,7 @@ require_once __DIR__ . '/classes/Flea.php';
                                 $discount = $user->getDiscount();
                                 $discounted = $notDiscounted - ($notDiscounted * $discount / 100);
                                 $food->setPrice(round($discounted, 2));
-                                echo "<p class='product-info'><strong>Prezzo: </strong><del class='red'>$notDiscounted</del><span> " . $toy->getPrice() . " &euro;</span></p>";
+                                echo "<p class='product-info'><strong>Prezzo: </strong><del class='red'>$notDiscounted</del><span> " . $food->getPrice() . " &euro;</span></p>";
                             } else {
                                 echo "<p class='product-info'><strong>Prezzo: </strong><span>" . $food->getPrice() . " &euro;</span></p>";
                             }
@@ -150,7 +152,9 @@ require_once __DIR__ . '/classes/Flea.php';
                             // diversi stili e output quantità
                             if($food->getQuantity() < 20) {
                                 echo "<p class='product-info'><strong>Quantità: </strong><span class='red'>" . $food->getQuantity() . " (in esaurimento)</span></p>";
-                            } else if($food->getQuantity() >= 20 && $food->getQuantity() < 200) {
+                            } else if ($food->getQuantity() >= 20 && $food->getQuantity() < 50) {
+                                echo "<p class='product-info'><strong>Quantità: </strong><span class='orange'>" . $food->getQuantity() . "</span></p>";
+                            } else if($food->getQuantity() >= 50 && $food->getQuantity() < 200) {
                                 echo "<p class='product-info'><strong>Quantità: </strong><span class='green'>" . $food->getQuantity() . "</span></p>";
                             } else {
                                 echo "<p class='product-info'><strong>Quantità: </strong><span class='green'>200+</span><br>";
@@ -187,7 +191,7 @@ require_once __DIR__ . '/classes/Flea.php';
                                 $discount = $user->getDiscount();
                                 $discounted = $notDiscounted - ($notDiscounted * $discount / 100);
                                 $flea->setPrice(round($discounted, 2));
-                                echo "<p class='product-info'><strong>Prezzo: </strong><del class='red'>$notDiscounted</del><span> " . $toy->getPrice() . " &euro;</span></p>";
+                                echo "<p class='product-info'><strong>Prezzo: </strong><del class='red'>$notDiscounted</del><span> " . $flea->getPrice() . " &euro;</span></p>";
                             } else {
                                 echo "<p class='product-info'><strong>Prezzo: </strong><span>" . $flea->getPrice() . " &euro;</span></p>";
                             }
@@ -196,7 +200,9 @@ require_once __DIR__ . '/classes/Flea.php';
                             // diversi stili e output quantità
                             if($flea->getQuantity() < 20) {
                                 echo "<p class='product-info'><strong>Quantità: </strong><span class='red'>" . $flea->getQuantity() . " (in esaurimento)</span></p>";
-                            } else if($flea->getQuantity() >= 20 && $flea->getQuantity() < 200) {
+                            } else if ($flea->getQuantity() >= 20 && $flea->getQuantity() < 50) {
+                                echo "<p class='product-info'><strong>Quantità: </strong><span class='orange'>" . $flea->getQuantity() . "</span></p>";
+                            } else if($flea->getQuantity() >= 50 && $flea->getQuantity() < 200) {
                                 echo "<p class='product-info'><strong>Quantità: </strong><span class='green'>" . $flea->getQuantity() . "</span></p>";
                             } else {
                                 echo "<p class='product-info'><strong>Quantità: </strong><span class='green'>200+</span><br>";
